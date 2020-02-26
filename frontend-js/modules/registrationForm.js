@@ -132,7 +132,7 @@ export default class RegistratioinForm{
             axios.post('/doesEmailExist', {_csrf: this._csrf, email: this.email.value}).then((response) => {
                 if (response.data) {
                     this.email.isUnique = false
-                    this.showValidationError(this.email, "That username is already taken.")
+                    this.showValidationError(this.email, "That email is already in use.")
                 } else {
                     this.email.isUnique = true
                     //this.hideValidationError(this.email)

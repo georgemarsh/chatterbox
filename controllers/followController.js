@@ -1,4 +1,5 @@
 const Follow = require('../models/Follow')
+const sendgrid = require("@sendgrid/mail")
 
 exports.addFollow = function(req, res){
     let follow = new Follow(req.params.username, req.visitorId)
@@ -12,6 +13,8 @@ exports.addFollow = function(req, res){
         req.session.save(() => res.redirect("/"))
     })
 }
+
+
 
 exports.removeFollow = function (req, res) {
     let follow = new Follow(req.params.username, req.visitorId)
