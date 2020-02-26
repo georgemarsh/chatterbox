@@ -2,10 +2,11 @@
   "name": "complex-app",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "db.js",
   "scripts": {
     "watch": "start nodemon db --ignore frontend-js --ignore public/ && start webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
+    
   },
   "keywords": [],
   "author": "",
